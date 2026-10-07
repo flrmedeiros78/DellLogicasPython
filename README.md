@@ -1,5 +1,40 @@
 # DellLogicasPython
-Curso de Logica de programação em Python pela https://leadfortaleza.com.br/
+
+Curso de Lógica de Programação em Python pela https://leadfortaleza.com.br/
+
+## Fluxo de Trabalho do Projeto
+
+```mermaid
+flowchart TD
+    DEV["Desenvolvimento<br/>VS Code / Editor"]
+    
+    GDRIVE[("Google Drive<br/>mod_xpto.py")]
+    GITHUB[("GitHub<br/>Repositório")]
+    DATABRICKS[("Databricks<br/>Workspace")]
+    
+    COLAB["Google Colab<br/>xptos.ipynb"]
+    IMPORT["Import Módulo<br/>import mod_xpto"]
+    RUN["Execução<br/>Testes & Aprendizado"]
+    
+    DEV -->|"upload"| GDRIVE
+    DEV -->|"git push"| GITHUB
+    DEV -->|"sync"| DATABRICKS
+    
+    GDRIVE -->|"drive.mount"| COLAB
+    GITHUB -->|"wget raw URL"| COLAB
+    DATABRICKS -->|"dbutils.fs"| COLAB
+    
+    COLAB -->|"import"| IMPORT
+    IMPORT -->|"executa"| RUN
+    
+    style DEV fill:#DDA0DD,color:#000,stroke:#9370DB,stroke-width:2px
+    style GDRIVE fill:#b3e5fc,color:#000,stroke:#0288d1,stroke-width:2px
+    style GITHUB fill:#b3e5fc,color:#000,stroke:#0288d1,stroke-width:2px
+    style DATABRICKS fill:#b3e5fc,color:#000,stroke:#0288d1,stroke-width:2px
+    style COLAB fill:#ffd54f,color:#333,stroke:#f57f17,stroke-width:2px
+    style IMPORT fill:#bdbdbd,color:#333,stroke:#757575,stroke-width:2px
+    style RUN fill:#81c784,color:#000,stroke:#388e3c,stroke-width:2px
+```
 
 
 Contexto
